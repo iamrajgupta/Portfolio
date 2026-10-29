@@ -27,7 +27,7 @@ if(page==='work'){
  const track=document.querySelector('.graphic-track');
  const files=window.graphicAssets||[];
  track.innerHTML=[...files,...files].map(f=>`<img loading="lazy" src="${A('graphics',f)}" alt="Graphic design"/>`).join('');
- const videoFiles=['video1.mp4', 'video2.mp4', 'video3.mp4', 'video4.mp4'];
+const videoFiles = ['video1.mp4', 'video2.mp4', 'video3.mp4', 'video4.mp4'];
  document.querySelector('#video-grid').innerHTML=videoFiles.map(f=>`<article class="media-card"><video controls preload="metadata" playsinline><source src="${A('ai-videos',f)}" type="video/mp4"></video></article>`).join('');
 }
 if(page==='gallery'){
