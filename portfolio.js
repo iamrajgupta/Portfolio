@@ -28,8 +28,6 @@ if(page==='work'){
  const files=window.graphicAssets||[];
  track.innerHTML=[...files,...files].map(f=>`<img loading="lazy" src="${A('graphics',f)}" alt="Graphic design"/>`).join('');
 const videoFiles = ['video1.mp4', 'video2.mp4', 'video3.mp4', 'video4.mp4'];
- document.querySelector('#video-grid').innerHTML=videoFiles.map(f=>`<article class="media-card"><video controls preload="metadata" playsinline><source src="${A('ai-videos',f)}" type="video/mp4"></video></article>`).join('');
-}
 if(page==='gallery'){
  const track=document.querySelector('.gallery-track'), box=document.querySelector('.lightbox'), image=box.querySelector('img');let current=0;
  const open=n=>{current=(n+photos.length)%photos.length;image.src=photoUrl(photos[current]);box.classList.add('open')};
