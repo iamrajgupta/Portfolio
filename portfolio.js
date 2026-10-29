@@ -36,5 +36,6 @@ if(page==='gallery'){
  document.querySelector('.prev').onclick=()=>track.scrollBy({left:-420,behavior:'smooth'});document.querySelector('.next').onclick=()=>track.scrollBy({left:420,behavior:'smooth'});
  box.addEventListener('click',e=>{if(e.target===box)box.classList.remove('open')});document.addEventListener('keydown',e=>{if(e.key==='Escape')box.classList.remove('open');if(e.key==='ArrowLeft'&&box.classList.contains('open'))open(current-1);if(e.key==='ArrowRight'&&box.classList.contains('open'))open(current+1)});
 }
+}
 document.querySelector('.contact-form')?.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(e.currentTarget);const body=`Name: ${d.get('name')}\nMobile: ${d.get('mobile')}\n\n${d.get('message')}`;location.href=`mailto:graj00636@gmail.com?subject=${encodeURIComponent('Portfolio contact from '+d.get('name'))}&body=${encodeURIComponent(body)}`});
 
